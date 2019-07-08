@@ -15,7 +15,7 @@ class TipsController < ApplicationController
       req.params["oauth_token"] = session[:token]
       req.params["v"] = "20160201"
     end
-
+binding.pry
     @results = JSON.parse(resp.body)["response"]["tips"]["items"]
 
     render :index
